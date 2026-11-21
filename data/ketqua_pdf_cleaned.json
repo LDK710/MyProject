@@ -1,0 +1,150 @@
+{
+    "source_file": "Buoi_1_AI_Engineering_2026.pptx.pdf",
+    "total_pages": 36,
+    "pages": [
+        {
+            "page": 1,
+            "text": "1\nTRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN · ĐHQG-HCM\nCác kỹ thuật lập trình\ntrong Trí tuệ nhân tạo\nFoundation Models\nRAG\nAI Agents\nPrompt Engineering\nBUỔI 1\nGiới thiệu môn học · Tiêu chí đồ án · Tổng quan AI Engineering\nGiảng viên · Đặng Văn Thìn"
+        },
+        {
+            "page": 2,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n2\nGIỚI THIỆU\nGiảng viên phụ trách\nĐặng Văn Thìn\nGiảng viên · Nghiên cứu viên\nPhòng thí nghiệm Truyền thông Đa phương tiện (MMLab)\nTrường ĐH Công nghệ Thông tin, ĐHQG-HCM\nLead Engineer về NLP/LLM\nBosch Global Software Technologies Vietnam\nHướng nghiên cứu\nXử lý ngôn ngữ tự nhiên · AI tạo sinh (Generative AI) · LLM\n Website sites.google.com/uit.edu.vn/thindv/ Email thindv@uit.edu.vn"
+        },
+        {
+            "page": 3,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n3\nNỘI DUNG\nMục lục buổi học\n01\nGiới thiệu môn học\nMục tiêu, hình thức đánh giá, lộ trình 10 buổi học của môn.\n02\nTiêu chí đồ án\nYêu cầu, các đề tài gợi ý (ứng dụng & nghiên cứu) và cách chấm điểm.\n03\nTổng quan AI Engineering\nAI Engineering là gì và các kỹ thuật cốt lõi sẽ học trong môn."
+        },
+        {
+            "page": 4,
+            "text": "4\nPHẦN 1\nGiới thiệu môn học\nTên môn, mục tiêu đào tạo, hình thức đánh giá và lộ trình học tập trong 10 buổi."
+        },
+        {
+            "page": 5,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n5\nPHẦN 1 · MÔN HỌC\nThông tin chung\nTÊN MÔN HỌC\nCác kỹ thuật lập trình trong Trí tuệ nhân \ntạo\nCHUYÊN ĐỀ TRỌNG TÂM\nXử lý ngôn ngữ tự nhiên (NLP)\nKỹ thuật & kiến trúc xây dựng ứng dụng ngôn ngữ\nAI tạo sinh (Generative AI)\nỨng dụng dựa trên mô hình ngôn ngữ lớn (LLM)\n14\nBUỔI HỌC\n9 buổi lý thuyết + 1 buổi báo cáo đồ án\n70%\nTRỌNG SỐ ĐỒ ÁN\nKết quả môn học đánh giá chủ yếu qua đồ án nhóm\n≤ 4\nTHÀNH VIÊN / NHÓM\nLàm việc nhóm theo mô hình Agile"
+        },
+        {
+            "page": 6,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n6\nPHẦN 1 · MÔN HỌC\nHình thức đánh giá\n100%\ntổng điểm\nĐồ án cuối kỳ — 70%\nTrình bày cuốn báo cáo đồ án — 50%\nChất lượng nội dung, cấu trúc và cách trình bày báo cáo\nThuyết trình & hỏi đáp — 50%\nPhần trình bày trước lớp và trả lời câu hỏi phản biện\nĐiểm quá trình — 30%\nChuyên cần & tham gia trên lớp\nĐiểm danh và mức độ tham gia thảo luận, hoạt động\nTiến độ đồ án theo từng buổi\nCập nhật và phản hồi định kỳ theo mô hình Agile"
+        },
+        {
+            "page": 7,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n7\nPHẦN 1 · MÔN HỌC\nMục tiêu môn học\nCung cấp kiến thức thực tế về kỹ thuật và kiến trúc xây dựng ứng dụng NLP, kèm các kỹ năng triển khai một dự án AI hoàn chỉnh.\nPhân tích dự án AI\nXác định bài toán, phạm vi và tính khả thi của một dự án \nNLP.\nQuản lý & ước lượng\nƯớc lượng nguồn lực, tiến độ và rủi ro khi triển khai dự \nán AI.\nTriển khai & đánh giá\nCác bước đưa hệ thống vào vận hành và kinh nghiệm \nđánh giá sản phẩm.\nXây dựng ứng dụng LLM\nThiết kế ứng dụng dựa trên mô hình ngôn ngữ lớn từ \nđầu đến cuối."
+        },
+        {
+            "page": 8,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n8\nPHẦN 1 · MÔN HỌC\nLộ trình 10 buổi học\nBUỔI 1\nGiới thiệu kỹ thuật lập trình AI\nBUỔI 2\nÔn tập NLP & nguyên lý thiết kế hệ thống AI\nBUỔI 3\nGenerative AI và Large Language Models\nBUỔI 4-5\nKiến trúc RAG & RAG 2.0\nBUỔI 6-7\nPrompt Engineering, rút trích & re-ranker\n7·8\nBUỔI 8-9\nỨng dụng LLM & kiến trúc Single Agent và Multi-agent\n9\nBUỔI 10-1\nĐánh giá hệ thống RAG & Agent\n10\nBUỔI 12-13\nBáo cáo đồ án cuối kỳ"
+        },
+        {
+            "page": 9,
+            "text": "9\nPHẦN 2\nTiêu chí đồ án\nLàm việc nhóm theo mô hình Agile, chọn một trong hai hướng: xây dựng ứng dụng hoặc nghiên cứu."
+        },
+        {
+            "page": 10,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n10\nPHẦN 2 · ĐỒ ÁN\nYêu cầu chung & hai hướng đồ án\nLàm theo nhóm\nTối đa 4 thành viên mỗi nhóm\nQuy trình Agile\nChia sprint, cập nhật tiến độ theo buổi\nLĩnh vực NLP\nBài toán xử lý ngôn ngữ tự nhiên\nHƯỚNG 1 · XÂY DỰNG ỨNG DỤNG\nXây dựng một ứng dụng AI/NLP hoàn chỉnh giải quyết bài toán thực tế.\nVí dụ: chatbot tư vấn, hệ thống tóm tắt, tạo sinh nội dung, hệ \nmulti-agent…\nHƯỚNG 2 · NGHIÊN CỨU\nNghiên cứu kỹ thuật LLM / AI Agent / Prompt Engineering cho bài toán \nNLP (Sentiment, NER, QA).\nCó thể tham gia các cuộc thi shared task quốc tế (SemEval, MT-RAG…)."
+        },
+        {
+            "page": 11,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n11\nPHẦN 2 · HƯỚNG 1\nĐề tài ứng dụng gợi ý\nTóm tắt tài liệu học thuật\nRút gọn nội dung bài báo, giáo trình.\nChatbot tư vấn du lịch\nGợi ý lịch trình, điểm đến theo nhu cầu.\nTư vấn hỗ trợ pháp luật\nTrả lời câu hỏi dựa trên văn bản luật.\nỨng dụng tạo sinh nhạc\nSinh giai điệu / bản nhạc từ mô tả.\nTrợ lý hỏi đáp sức khỏe\nHỗ trợ thông tin, tư vấn sơ bộ.\nSáng tạo nội dung mạng xã hội\nGợi ý caption, bài đăng, chiến dịch.\nĐội ngũ marketing AI (multi-agent)\nAgent lên ý tưởng · viết nội dung · thiết kế ảnh.\nHỗ trợ nghiên cứu khoa học (multi-agent)\nAgent tìm tài liệu · phân tích · tổng hợp."
+        },
+        {
+            "page": 12,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n12\nPHẦN 2 · HƯỚNG 2\nĐồ án dạng nghiên cứu\nCách tiếp cận\nNghiên cứu kỹ thuật LLM / Agent / Prompt\nCho các bài toán NLP: Sentiment, NER, Question Answering.\nPhân tích & tìm hiểu bài toán\nÁp dụng kiến thức nghiên cứu để định hình bài toán cần giải.\nVận dụng nội dung môn học\nGắn kết trực tiếp với các kỹ thuật được dạy trong môn.\nVí dụ bài báo tham khảo: MIND — A Multi-agent Framework for Zero-shot \nHarmful Meme Detection (ACL 2025).\nTham gia cuộc thi Shared Task\nSemEval 2027 — Task 10-11\nhttps://semeval.github.io/SemEval2027/tasks"
+        },
+        {
+            "page": 15,
+            "text": "13\nPHẦN 3\nTổng quan AI Engineering\nAI Engineering là gì, khác gì so với ML Engineering, và vì sao nó đang trở thành một lĩnh vực riêng."
+        },
+        {
+            "page": 16,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n14\nPHẦN 3 · BỐI CẢNH\nVì sao AI Engineering xuất hiện?\nTừ \"huấn luyện mô hình\" sang \"xây dựng trên mô \nhình nền tảng\"\nTrước đây, làm AI nghĩa là thu thập dữ liệu và huấn luyện mô hình từ \nđầu. Ngày nay, các mô hình nền tảng (foundation models) mạnh mẽ đã \ncó sẵn qua API — công việc chuyển sang việc điều hướng, kết nối và xây \ndựng sản phẩm quanh chúng.\n“AI Engineering đơn giản là kỹ thuật phần mềm với các mô hình AI được \nđưa vào ngăn xếp công nghệ.”\n— Anton Bacaj\nMô hình nền tảng có sẵn\nGPT, Gemini, Llama… truy cập qua API, không cần huấn luyện lại.\nRào cản gia nhập thấp\nBiến ý tưởng thành sản phẩm demo chỉ trong vài giờ đến vài ngày.\nNhu cầu bùng nổ\nVô số ứng dụng mới: chatbot, RAG, agent, trợ lý chuyên ngành…\nKỹ năng mới cần thiết\nPrompt, RAG, agent, đánh giá — khác với ML truyền thống."
+        },
+        {
+            "page": 17,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n15\nPHẦN 3 · KHÁI NIỆM\nAI, Machine Learning, Deep Learning & GenAI\nARTIFICIAL INTELLIGENCE\nMACHINE LEARNING\nDEEP LEARNING\nGENERATIVE\nAI\nArtificial Intelligence\nMọi kỹ thuật giúp máy mô phỏng trí tuệ con người.\nMachine Learning\nMáy học quy luật từ dữ liệu thay vì lập trình tường minh.\nDeep Learning\nMạng nơ-ron nhiều tầng, nền tảng của AI hiện đại.\nGenerative AI\nSinh nội dung mới: văn bản, hình ảnh, âm thanh, mã nguồn."
+        },
+        {
+            "page": 18,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n16\nPHẦN 3 · KHÁI NIỆM\nBa tầng của AI Engineering\nMột ứng dụng AI hiện đại được xây dựng trên ba tầng — và AI Engineer làm việc nhiều nhất ở tầng ứng dụng.\nApplication Development\nTrọng tâm của môn học\nPrompt Engineering\nAI Interface / UX\nRAG\nĐánh giá \n(Evaluation)\nModel Development\nTùy chọn khi cần chuyên biệt\nDataset engineering\nFine-tuning / \nAdaptation\nInference \noptimization\nModeling & training\nInfrastructure\nNền tảng vận hành\nCompute & serving\nQuản lý dữ liệu\nGiám sát \n(Monitoring)\nMLOps / LLMOps"
+        },
+        {
+            "page": 19,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n17\nPHẦN 3 · SO SÁNH\nAI Engineering vs. ML Engineering\nKhác biệt cốt lõi về cách tiếp cận bài toán và mô hình\nTiêu chí\nML Engineering\nAI Engineering\nLoại tác vụ\nXây dựng với ML truyền thống\nXây dựng trên mô hình nền tảng\nMô hình & huấn luyện\nBắt buộc có kiến thức ML để huấn luyện từ đầu\nKiến thức ML là \"nên có\", không bắt buộc\nKỹ thuật dữ liệu\nTập trung feature engineering (dữ liệu bảng)\nKhử trùng lặp, tokenization, kiểm soát chất lượng\nTối ưu suy luận\nQuan trọng\nQuan trọng hơn (chi phí & độ trễ lớn)"
+        },
+        {
+            "page": 20,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n18\nPHẦN 3 · SO SÁNH\nKhác biệt khi phát triển ứng dụng\nTầm quan trọng của từng khâu trong phát triển ứng dụng thay đổi rõ rệt\nKhâu phát triển\nML Engineering\nAI Engineering\nGiao diện AI (AI interface)\nÍt quan trọng\nQuan trọng\nPrompt Engineering\nKhông áp dụng\nQuan trọng\nĐiều phối (Orchestration)\nQuan trọng\nQuan trọng\nĐánh giá (Evaluation)\nQuan trọng\nQuan trọng hơn\nAI Engineering đặt nặng giao diện, prompt và đánh giá — những khâu gần với phát triển sản phẩm hơn là huấn luyện mô hình."
+        },
+        {
+            "page": 21,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n19\nPHẦN 3 · GÓC NHÌN\nAI Engineering ≈ Full-stack Engineering\n“Nhiều AI Engineer thành công nhất hiện nay đến từ nền tảng front-end hoặc full-stack.”\nAI Engineering — hướng sản phẩm\n• Ngôn ngữ đa dạng: Python và cả JavaScript (LangChain.js, \nTransformers.js, OpenAI Node, Vercel AI SDK).\n• Nhanh chóng biến ý tưởng thành demo, lấy phản hồi rồi lặp lại.\n• Sản phẩm và trải nghiệm người dùng được ưu tiên ngay từ đầu.\nML Engineering — hướng mô hình\n• Xoay quanh Python (scikit-learn, TensorFlow, Hugging Face).\n• Quy trình bắt đầu từ thu thập dữ liệu và huấn luyện mô hình.\n• Việc xây dựng sản phẩm thường đến ở bước cuối cùng."
+        },
+        {
+            "page": 22,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n20\nPHẦN 3 · XU HƯỚNG\nKỹ năng AI tăng trưởng nhanh nhất\nMức tăng trưởng của các kỹ năng liên quan AI được thêm vào hồ sơ LinkedIn (giai đoạn quanh thời điểm GenAI bùng nổ).\n+332%\ntăng trưởng của kỹ năng \"Question Answering\"\n~3×\nSố vị trí \"Head of AI\" tại Mỹ đã tăng gần gấp 3 \nlần trong 5 năm gần đây.\nNguồn: LinkedIn · Chip Huyen, \"AI Engineering\""
+        },
+        {
+            "page": 23,
+            "text": "21\nPHẦN 3 · TRỌNG TÂM\nCác kỹ thuật AI Engineering cốt lõi\nBảy nhóm kỹ thuật sẽ được đào sâu trong suốt môn học — từ prompt, RAG, agent đến đánh giá và \ntriển khai."
+        },
+        {
+            "page": 24,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n22\nPHẦN 3 · BẢN ĐỒ\nBức tranh tổng thể các kỹ thuật\nBuổi 3\nFoundation Models & LLM\nNền tảng của mọi ứng dụng AI hiện đại.\nBuổi 5·6\nPrompt Engineering\nĐiều khiển mô hình bằng ngôn ngữ tự \nnhiên.\nBuổi 4\nRAG & RAG 2.0\nTruy xuất tri thức ngoài để trả lời chính \nxác.\nBuổi 7·8\nAI Agents & Multi-agent\nMô hình tự lập kế hoạch và dùng công \ncụ.\nBổ trợ\nFine-tuning & Adaptation\nTinh chỉnh mô hình cho tác vụ chuyên \nbiệt.\nBuổi 9\nEvaluation\nĐo lường chất lượng hệ thống \nLLM/RAG/Agent.\nBổ trợ\nInference & Deployment\nTối ưu chi phí, độ trễ khi đưa vào vận \nhành.\nXuyên suốt\nGuardrails & Responsible AI\nAn toàn, kiểm soát và trách nhiệm."
+        },
+        {
+            "page": 25,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n23\nKỸ THUẬT 1\nPrompt Engineering\nĐiều khiển hành vi của mô hình nền tảng thông qua chỉ dẫn bằng ngôn ngữ tự nhiên — không cần huấn luyện lại (in-context learning).\nZero-shot & Few-shot\nRa lệnh trực tiếp hoặc kèm vài ví dụ mẫu để định \nhướng.\nChain-of-Thought (CoT)\nYêu cầu mô hình \"suy nghĩ từng bước\" để giải bài toán \nphức tạp.\nStructured Output\nBuộc trả về JSON/schema hoặc gọi hàm (function \ncalling).\nRole & System Prompt\nGán vai trò, ngữ cảnh và ràng buộc cho mô hình.\nReAct (Reason + Act)\nKết hợp suy luận và hành động — nền tảng cho AI \nAgent.\nSelf-consistency\nSinh nhiều lời giải rồi chọn kết quả nhất quán nhất.\nNguyên tắc: rõ ràng · cụ thể · có ví dụ · ràng buộc định dạng · chia nhỏ tác vụ · lặp và tinh chỉnh (prompt versioning)."
+        },
+        {
+            "page": 26,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n24\nKỸ THUẬT 2\nRetrieval-Augmented Generation (RAG)\nKết hợp truy xuất tri thức ngoài với sinh văn bản — giúp mô hình trả lời chính xác, cập nhật và có trích dẫn, mà không cần fine-tune.\n① LẬP CHỈ MỤC (offline)\nTài liệu\nChunking\nEmbedding\nVector Store\n② TRUY VẤN (online)\nCâu hỏi\nEmbedding\nTruy xuất top-k\nRe-rank\nLLM sinh\nTrả lời\nVì sao dùng RAG? khi cần tri thức riêng/độc quyền · thay đổi thường xuyên · cần dẫn nguồn · giảm ảo giác (hallucination) mà không sửa trọng số mô hình."
+        },
+        {
+            "page": 27,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n25\nKỸ THUẬT 2 · NÂNG CAO\nRAG 2.0 — Các kỹ thuật cải tiến\nRAG cơ bản dễ trả lời sai khi truy xuất kém. RAG 2.0 tối ưu từng khâu để tăng độ chính xác và độ tin cậy.\nHybrid Search\nKết hợp tìm kiếm từ khóa (BM25) và ngữ nghĩa \n(vector).\nRe-ranking\nDùng cross-encoder xếp lại các đoạn truy xuất theo độ \nliên quan.\nQuery Rewriting\nViết lại / mở rộng câu hỏi để truy xuất tốt hơn.\nChunk Optimization\nChia đoạn hợp lý, chồng lấp, theo cấu trúc tài liệu.\nMetadata Filtering\nLọc theo thẻ, nguồn, thời gian trước khi truy xuất.\nAgentic & GraphRAG\nAgent tự lặp truy xuất; RAG trên đồ thị tri thức."
+        },
+        {
+            "page": 28,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n26\nKỸ THUẬT 3\nAI Agents\nHệ thống dùng LLM làm \"bộ não\" để lập kế hoạch, gọi công cụ (tools), quan sát kết quả và lặp cho đến khi đạt mục tiêu.\nMục tiêu\nngười dùng\nSuy luận\n& lập kế hoạch\nHành động\n(gọi tool)\nQuan sát\nkết quả\nTrả lời\nlặp lại đến khi hoàn thành\nTHÀNH PHẦN CỦA MỘT AGENT\nPlanning\nPhân rã mục tiêu thành các bước nhỏ.\nTools\nGọi API, tìm kiếm, chạy code, truy \nCSDL.\nMemory\nBộ nhớ ngắn hạn & dài hạn giữa các \nbước.\nReflection\nTự đánh giá và sửa sai kết quả trung \ngian."
+        },
+        {
+            "page": 29,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n27\nKỸ THUẬT 3 · NÂNG CAO\nHệ đa tác nhân (Multi-agent)\nChia bài toán lớn cho nhiều agent chuyên biệt phối hợp với nhau — mỗi agent một vai trò, một bộ công cụ.\nOrchestrator\n(điều phối)\nResearcher\ntìm tài liệu\nAnalyst\nphân tích\nWriter\ntổng hợp\nVí dụ: hệ hỗ trợ nghiên cứu khoa học\nOrchestrator – Worker\nMột agent điều phối, phân việc cho các agent con.\nPlan-and-Execute\nLập kế hoạch toàn cục rồi thực thi từng bước.\nDebate / Reflection\nNhiều agent tranh luận, phản biện để tăng chất lượng.\nShared Memory\nChia sẻ ngữ cảnh và kết quả trung gian giữa các agent."
+        },
+        {
+            "page": 30,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n28\nKỸ THUẬT 4\nPrompting · RAG · Fine-tuning\nBa cách \"tùy biến\" một mô hình nền tảng — chọn đúng công cụ theo bài toán, hoặc kết hợp cả ba.\nPrompting\nĐa số bài toán, cần nhanh\nChi phí\nThấp nhất\nDữ liệu\nKhông cần\nSửa trọng số\nKhông\nĐiểm mạnh\nTriển khai tức thì\nRAG\nCần tri thức riêng, cập nhật\nChi phí\nTrung bình\nDữ liệu\nKho tài liệu\nSửa trọng số\nKhông\nĐiểm mạnh\nChính xác, dẫn nguồn\nFine-tuning\nCần hành vi/định dạng nhất quán\nChi phí\nCao\nDữ liệu\nNhiều mẫu gán nhãn\nSửa trọng số\nCó\nĐiểm mạnh\nChuyên biệt, tối ưu quy mô\nQUY TẮC THỰC HÀNH\n1. Prompt trước\n2. Thêm RAG cho tri thức\n3. Fine-tune cho hành vi & quy mô"
+        },
+        {
+            "page": 31,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n29\nKỸ THUẬT 5\nĐánh giá hệ thống AI\nVì sao khó?\nĐầu ra mở, không có một đáp án đúng duy \nnhất.\nCùng câu hỏi, nhiều câu trả lời đều hợp lệ.\nPhải đo cả chất lượng lẫn chi phí & độ trễ.\nDễ rò rỉ dữ liệu (data leakage) khi đánh giá.\nMetrics offline\nExact Match, F1, BLEU/ROUGE cho tác vụ có tham \nchiếu.\nĐánh giá RAG\nTruy xuất: Recall@k, MRR · Sinh: faithfulness, \nrelevance (RAGAS).\nĐánh giá Agent\nTask success rate, số bước, chi phí, độ chính xác gọi \ntool.\nLLM-as-a-judge & Human\nDùng LLM chấm điểm + đánh giá người + A/B \ntesting online."
+        },
+        {
+            "page": 32,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n30\nKỸ THUẬT 6\nTối ưu suy luận & triển khai\nĐưa mô hình vào vận hành với chi phí và độ trễ chấp nhận được — cân bằng chất lượng, tốc độ và chi phí.\nQuantization\nNén trọng số về INT8/INT4 để giảm bộ nhớ & tăng \ntốc.\nKV-cache & Batching\nTái dùng tính toán, gộp yêu cầu để tăng thông lượng.\nDistillation\nChưng cất mô hình lớn thành mô hình nhỏ, nhanh \nhơn.\nSpeculative Decoding\nMô hình nhỏ \"đoán trước\", mô hình lớn kiểm chứng.\nPrompt / Result Caching\nLưu cache kết quả cho truy vấn lặp lại.\nModel Routing\nDùng mô hình nhỏ cho việc dễ, mô hình lớn khi cần.\nCông cụ serving: vLLM · TGI · TensorRT-LLM Đánh đổi cần cân bằng: chất lượng ↔ độ trễ ↔ chi phí."
+        },
+        {
+            "page": 33,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n31\nKỸ THUẬT 7\nGuardrails & Responsible AI\nBảo vệ hệ thống và người dùng: kiểm soát đầu vào/đầu ra, giảm ảo giác, và đảm bảo an toàn — trách nhiệm.\nKiểm soát đầu vào\nChống prompt injection, lọc PII và nội dung độc hại.\nKiểm soát đầu ra\nXác thực schema, kiểm duyệt (moderation), lọc độc \nhại.\nGiảm ảo giác\nGrounding bằng RAG, trích dẫn nguồn, tự kiểm \n(self-check).\nAn toàn vận hành\nChống jailbreak, giới hạn tần suất (rate limiting).\nQuan sát & ghi log\nObservability, giám sát để phát hiện lỗi và lạm dụng.\nĐạo đức AI\nCông bằng, minh bạch, tôn trọng quyền riêng tư."
+        },
+        {
+            "page": 49,
+            "text": "36\nPHẦN 3 · TÀI NGUYÊN\nTài liệu & Công cụ\nSách nền tảng, các framework LLM/Agent và cổng API để bắt tay vào đồ án."
+        },
+        {
+            "page": 50,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n37\nTÀI LIỆU\nSách tham khảo\nAI Agents in Action\nMichael Lanham\nDesigning LLM \nApplications\nSuhas Pai · O’Reilly\nPrompt Engineering\nLee Boonstra · Google\nMastering RAG\nGalileo\nAI Agents: 25 Use Cases\nStackAI"
+        },
+        {
+            "page": 51,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n38\nCÔNG CỤ\nFramework LLM & Agent\nCác thư viện phổ biến để ghép nối mô hình, dữ liệu, công cụ và bộ nhớ thành ứng dụng hoàn chỉnh.\nLlamaIndex\nKhung dữ liệu để xây RAG và agent trên dữ \nliệu riêng của bạn.\nllamaindex.ai\nLangChain\nThư viện phổ biến nhất để kết nối LLM, tool, \nbộ nhớ và chuỗi xử lý.\nlangchain.com\nLangGraph\nXây dựng agent có trạng thái và luồng điều \nkhiển phức tạp, đáng tin cậy.\nlangchain.com/langgraph"
+        },
+        {
+            "page": 52,
+            "text": "Các kỹ thuật lập trình trong Trí tuệ nhân tạo · Trường ĐH Công nghệ Thông tin, ĐHQG-HCM\n39\nCÔNG CỤ\nĐăng ký truy cập API\nCác cổng API để gọi mô hình nền tảng — điểm khởi đầu cho đồ án của nhóm.\nOpenAI API\nCác mô hình GPT — mạnh mẽ, hệ sinh thái \ncông cụ phong phú.\nplatform.openai.com\nGemini API\nMô hình Gemini của Google DeepMind, đa \nphương thức.\nai.google.dev\nFPT AI Marketplace\nNhiều mô hình hỗ trợ tốt tiếng Việt, dễ tiếp \ncận trong nước.\nmarketplace.fpt.ai"
+        },
+        {
+            "page": 53,
+            "text": "40\nHỏi & Đáp\nCảm ơn các bạn đã theo dõi — hẹn gặp lại ở Buổi 2!\nthindv@uit.edu.vn · sites.google.com/uit.edu.vn/thindv"
+        }
+    ]
+}
