@@ -15,6 +15,9 @@ def clean_text(text):
     
     # Thay thế nhiều khoảng trắng hoặc tab liên tiếp bằng 1 khoảng trắng
     text = re.sub(r'[ \t]+', ' ', text)
+
+    # Xóa các dòng mô tả icon do LlamaParse trích xuất (VD: "icon: purple square")
+    text = re.sub(r'icon:\s*[a-zA-Z0-9 _-]+', '', text)
     
     # Xóa khoảng trắng ở đầu và cuối văn bản
     return text.strip()

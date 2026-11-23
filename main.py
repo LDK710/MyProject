@@ -1,60 +1,135 @@
+from pathlib import Path
 from src.config import DATA_DIR
 from src.pdf_loader import extract_pdf
 from src.text_cleaner import remove_empty_pages, validate_document
 from src.file_handler import save_json, load_json
+from src.chunking import chunk_document_optimal
+from src.embedding import embed_documents, embed_query
+from src.vector_store import add_chunks, search_chunks, get_collection_count
+
+def ingest_pdf_pipeline(pdf_path: Path, force_reprocess: bool = False):
+    """
+    Luồng nạp và lập chỉ mục tài liệu PDF vào Vector Database (ChromaDB):
+    1. Trích xuất PDF -> Markdown (hoặc dùng lại cache JSON nếu đã xử lý trước đó).
+    2. Làm sạch và kiểm tra tính toàn vẹn dữ liệu.
+    3. Chia chunks theo cấu trúc Markdown + đệ quy ký tự.
+    4. Vector hóa và lưu bền vững vào ChromaDB.
+    """
+    if not pdf_path.exists():
+        print(f"[Lỗi] Không tìm thấy file PDF tại: {pdf_path}")
+        return False
+
+    cleaned_json_path = DATA_DIR / f"{pdf_path.stem}_cleaned.json"
+    chunks_json_path = DATA_DIR / f"{pdf_path.stem}_chunks.json"
+
+    # Bước 1 & 2: Trích xuất & Làm sạch (Tận dụng file JSON đã lưu để tiết kiệm API LlamaCloud)
+    if cleaned_json_path.exists() and not force_reprocess:
+        print(f"[Bước 1-2] Phát hiện dữ liệu đã làm sạch tại '{cleaned_json_path.name}'. Đang tải lại...")
+        cleaned_pages = load_json(cleaned_json_path)
+    else:
+        print(f"[Bước 1] Đang trích xuất nội dung PDF từ '{pdf_path.name}' qua LlamaParse...")
+        raw_pages = extract_pdf(pdf_path)
+        if not raw_pages:
+            print("[Dừng] Không trích xuất được dữ liệu từ PDF.")
+            return False
+
+        print("[Bước 2] Đang làm sạch và kiểm tra dữ liệu...")
+        cleaned_pages = remove_empty_pages(raw_pages)
+        is_valid, msg = validate_document(cleaned_pages)
+        if not is_valid:
+            print(f"[Dừng] {msg}")
+            return False
+
+        print(f"-> {msg}")
+        save_json(cleaned_pages, cleaned_json_path)
+
+    # Bước 3: Chia nhỏ văn bản (Hybrid MarkdownHeader + RecursiveCharacter)
+    print(f"\n[Bước 3] Đang chia chunks tối ưu cho '{pdf_path.name}'...")
+    chunks = chunk_document_optimal(
+        pages=cleaned_pages,
+        source_file=pdf_path.name,
+        chunk_size=1000,
+        chunk_overlap=150
+    )
+    save_json({
+        "source_file": pdf_path.name,
+        "total_chunks": len(chunks),
+        "chunks": chunks
+    }, chunks_json_path)
+    print(f"-> Đã tạo {len(chunks)} chunks.")
+
+    # Bước 4: Chuẩn bị dữ liệu và tạo Vector Embedding
+    print("\n[Bước 4] Đang vector hóa các chunks bằng mô hình multilingual-e5-small...")
+    ids = [f"{item['source_file']}_{item['chunk_id']}" for item in chunks]
+    documents = [item["text"] for item in chunks]
+    metadatas = [
+        {
+            "source_file": str(item.get("source_file", "")),
+            "page": int(item.get("page", 0)),
+            "section_context": str(item.get("section_context", ""))
+        }
+        for item in chunks
+    ]
+
+    embeddings = embed_documents(documents)
+
+    # Bước 5: Lưu vào ChromaDB (Persistent Storage)
+    print("[Bước 5] Đang lưu vectors và metadata vào ChromaDB...")
+    add_chunks(ids=ids, documents=documents, embeddings=embeddings, metadatas=metadatas)
+    print(f"-> Hoàn tất nạp dữ liệu! Tổng số chunks trong ChromaDB: {get_collection_count()}")
+    return True
+
+
+def interactive_search_loop(top_k: int = 3):
+    """
+    Vòng lặp cho phép người dùng nhập câu hỏi liên tục và truy xuất các đoạn tài liệu liên quan nhất.
+    """
+    print("\n" + "=" * 60)
+    print("HỆ THỐNG TÌM KIẾM NGỮ NGHĨA TÀI LIỆU (Gõ 'exit' hoặc 'q' để thoát)")
+    print("=" * 60)
+
+    while True:
+        query = input("\nNhập câu hỏi của bạn: ").strip()
+        if not query:
+            continue
+        if query.lower() in ["exit", "quit", "q"]:
+            print("Đã thoát chương trình.")
+            break
+
+        # Chuyển câu hỏi thành vector và truy vấn ChromaDB
+        query_vec = embed_query(query)
+        results = search_chunks(query_embedding=query_vec, top_k=top_k)
+
+        docs = results["documents"][0]
+        metas = results["metadatas"][0]
+        distances = results["distances"][0]
+
+        if not docs:
+            print("-> Không tìm thấy đoạn thông tin nào phù hợp trong cơ sở dữ liệu.")
+            continue
+
+        print(f"\n--- TOP {len(docs)} ĐOẠN THÔNG TIN LIÊN QUAN NHẤT ---")
+        for i in range(len(docs)):
+            similarity = 1 - distances[i]
+            meta = metas[i]
+            section_info = f" | Mục: {meta['section_context']}" if meta.get("section_context") else ""
+
+            print(f"\n[{i + 1}] Độ tương đồng: {similarity:.4f} | File: {meta['source_file']} | Trang: {meta['page']}{section_info}")
+            print("-" * 50)
+            print(docs[i])
+
 
 def main():
-    print("=== CHƯƠNG TRÌNH TRÍCH XUẤT VÀ LÀM SẠCH PDF SANG JSON ===")
-    
-    # 1. Đường dẫn file PDF và file JSON đích
-    pdf_path = DATA_DIR / "Buoi_1_AI_Engineering_2026.pptx.pdf"
-    cleaned_json_path = DATA_DIR / "ketqua_pdf_cleaned.json"
+    # Thay đổi tên file PDF của bạn nằm trong thư mục data/ tại đây
+    target_pdf = DATA_DIR / "Buoi_1_AI_Engineering_2026.pptx.pdf"
 
-    # 2. Gọi hàm đọc PDF
-    print(f"\n[Bước 1] Đang xử lý file: {pdf_path.name}...")
-    extracted_pages = extract_pdf(pdf_path)
+    # Chạy pipeline nạp tài liệu (đặt force_reprocess=True nếu muốn gọi lại LlamaParse từ đầu)
+    success = ingest_pdf_pipeline(pdf_path=target_pdf, force_reprocess=False)
 
-    # 3. Xử lý dữ liệu nếu đọc thành công
-    if extracted_pages:
-        print(f"-> Đã trích xuất thành công {len(extracted_pages)} trang thô.")
-        
-        # 4. Kiểm tra định dạng dữ liệu trích xuất
-        print(f"\n[Bước 2] Kiểm tra định dạng dữ liệu trích xuất...")
-        is_valid, validation_msg = validate_document(extracted_pages)
-        print(f"- {validation_msg}")
-        
-        if is_valid:
-            # 5. Làm sạch văn bản và loại bỏ trang rỗng
-            print(f"\n[Bước 3] Làm sạch văn bản và loại bỏ trang rỗng...")
-            cleaned_pages = remove_empty_pages(extracted_pages)
-            
-            # Đóng gói kết quả vào Dictionary sau khi đã làm sạch
-            cleaned_payload = {
-                "source_file": pdf_path.name,
-                "total_pages": len(cleaned_pages),
-                "pages": cleaned_pages
-            }
-            
-            # 6. Lưu xuống ổ cứng thành file JSON
-            print(f"\n[Bước 4] Đang lưu dữ liệu hoàn chỉnh sang {cleaned_json_path.name}...")
-            save_json(cleaned_payload, cleaned_json_path)
-            print(f"-> Hoàn tất! Đã lưu {len(cleaned_pages)} trang hợp lệ sau khi lọc.")
+    # Nếu nạp thành công (hoặc DB đã có sẵn dữ liệu), mở giao diện đặt câu hỏi
+    if success or get_collection_count() > 0:
+        interactive_search_loop(top_k=3)
 
-            # 7. Đọc ngược lại từ JSON đã làm sạch lên để nghiệm thu
-            print(f"\n[Bước 5] Mở file {cleaned_json_path.name} để kiểm tra...")
-            verified_data = load_json(cleaned_json_path)
-            
-            if verified_data and verified_data['pages']:
-                print(f"- Tên tài liệu: {verified_data['source_file']}")
-                print(f"- Tổng số trang: {verified_data['total_pages']}")
-                # Trích xuất thử 150 ký tự đầu tiên của trang hợp lệ đầu tiên để xem trước
-                trang_1_preview = verified_data['pages'][0]['text'][:150]
-                print(f"- Bản xem trước trang đầu tiên: {trang_1_preview}...\n")
-        else:
-            print("-> Dừng tiền xử lý do tài liệu đầu vào không hợp lệ.")
-
-    else:
-        print(f"-> [Thất bại] Vui lòng chép file '{pdf_path.name}' vào thư mục 'data/'.")
 
 if __name__ == "__main__":
     main()

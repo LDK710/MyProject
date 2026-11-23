@@ -1,1 +1,17 @@
+# Môi trường ảo & Cache Python
 .venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Bảo mật (TUYỆT ĐỐI KHÔNG PUSH FILE .env CHỨA API KEY)
+.env
+
+# Dữ liệu cục bộ & Vector Database
+data/chroma_db/
+data/*.json
+data/*.pdf
+
+# Cấu hình IDE
+.vscode/
+.idea/
